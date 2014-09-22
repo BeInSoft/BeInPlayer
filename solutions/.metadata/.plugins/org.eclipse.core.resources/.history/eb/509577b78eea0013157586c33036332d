@@ -1,0 +1,24 @@
+package beinplayer.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import beinplayer.metier.Artiste;
+import beinplayer.metier.Genre;
+import beinplayer.metier.Titre;
+
+public class TitreDAOMock implements TitreDAO {
+
+	@Override
+	public List<Titre> getAllTitreFromDataBase() {
+		List<Titre> result = new ArrayList<Titre>();
+		Artiste stromae = new Artiste("Stromae");
+		this.ajouterTitre(new Titre("Papaoutai",231, stromae, Genre.Electro),  stromae);
+		this.ajouterTitre(new Titre("Tous les mêmes",211, stromae, Genre.Electro),  stromae);
+		this.ajouterTitre(new Titre("Alors on danse",206, stromae, Genre.Electro),  stromae);
+		this.ajouterTitre(new Titre("Formidable",224, stromae, Genre.Electro),  stromae);
+		this.ajouterTitre(new Titre("Ta fête",276, stromae, Genre.Electro),  stromae);
+		return null;
+	}
+
+}

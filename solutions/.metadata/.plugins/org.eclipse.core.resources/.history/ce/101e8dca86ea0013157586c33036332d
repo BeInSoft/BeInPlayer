@@ -1,0 +1,10 @@
+package beinplayer.metier;
+
+public class BeInPlayer {
+
+	public BeInPlayer() {
+		System.out.println("DŽmarrage du BeInPlayer");
+	}
+	
+	
+}

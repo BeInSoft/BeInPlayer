@@ -1,0 +1,68 @@
+import java.util.Date;
+
+
+public class Test{
+	public static void main(String[] args) {
+		//int a = 10;
+		Valeur a = new Valeur(10);
+		incrementerValeur(a);
+		System.out.println("la valeur est "+a);
+	}
+	
+	public static void incrementerValeur(Valeur valeur){
+		valeur++;
+	}
+}
+
+
+class Valeur{
+	public int valeur;
+	public Valeur(int valeur) {
+		this.valeur = valeur;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Voiture extends Object{
+
+	//Attributs
+	public int vitesse = 0;
+	public Date immatriculation=new Date();
+	public String marque="Renault";
+	
+	//constante 
+	public final int LIMITATION = 130;
+	public final int LIMITATION_VILLE = 50;
+
+	//constructeur
+	public Voiture() {
+	
+	}
+	
+
+	//MŽthodes
+	public void accelerer(){
+		vitesse++;
+	}
+	
+	public void accelerer(int vitesse){
+		this.vitesse=vitesse;
+	}
+	
+	@Override
+	public String toString() {
+		return "La voiture de marque "+this.marque+ " roule ˆ "+this.vitesse+"km/h";
+	}
+}

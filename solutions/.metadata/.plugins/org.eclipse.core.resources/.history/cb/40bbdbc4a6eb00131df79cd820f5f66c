@@ -1,0 +1,9 @@
+package beinplayer.dao;
+
+public class DAOFactory {
+
+	private final static boolean isMock = false;
+	
+	public static TitreDAO 
+	
+}

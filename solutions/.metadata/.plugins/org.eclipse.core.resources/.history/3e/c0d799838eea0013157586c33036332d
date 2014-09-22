@@ -1,0 +1,15 @@
+package beinplayer.dao;
+
+import java.util.List;
+
+import beinplayer.metier.Titre;
+
+public class TitreDAOMock implements TitreDAO {
+
+	@Override
+	public List<Titre> getAllTitreFromDataBase() {
+		
+		return null;
+	}
+
+}

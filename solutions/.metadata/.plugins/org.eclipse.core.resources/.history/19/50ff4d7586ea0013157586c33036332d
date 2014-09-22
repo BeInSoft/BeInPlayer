@@ -1,0 +1,42 @@
+package beinplayer.ihm;
+import java.util.Scanner;
+
+import beinplayer.metier.Catalogue;
+import beinplayer.metier.Titre;
+import beinplayer.player.Lecteur;
+import beinplayer.player.ListeDeLecture;
+
+/**
+ * Itération 3 : Un peu d'objets 
+ * @author beInSoft
+ */
+class Main {
+	
+	public static void main(String[] args) {
+
+			try {
+				Catalogue catalogue = new Catalogue();
+				Lecteur lecteur = new Lecteur();
+				Thread thread = new Thread(lecteur);
+				thread.start();
+				
+				Scanner sc = new Scanner(System.in);
+				
+				System.out.println("Veuillez lancer la lecture [p]");
+				String nextLine = sc.nextLine();
+				
+				
+				
+				ListeDeLecture listeDeLectureInitiale = new ListeDeLecture();
+				listeDeLectureInitiale.ajouter(new Titre());
+				listeDeLectureInitiale.ajouter(new Titre());
+				lecteur.setListeDeLecture(listeDeLectureInitiale);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+	}
+	
+	
+}

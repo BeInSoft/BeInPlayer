@@ -1,0 +1,35 @@
+package beinplayer.metier.lecteur;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import beinplayer.metier.Lisible;
+
+public class ListeDeLecture implements Lisible{
+
+	private List<Lisible> listeDeLecture;
+	
+	public ListeDeLecture() {
+		super();
+		listeDeLecture = new ArrayList<Lisible>();
+	}
+	
+	public void ajouter(Lisible lisible){
+		if(!listeDeLecture.contains(lisible)){
+			listeDeLecture.add(lisible);
+			System.out.println("Ajout de "+lisible+" a la liste de lecture.");
+		}
+	}
+	
+	@Override
+	public void lire() {
+		Iterator<Lisible> it= listeDeLecture.iterator();
+		while (it.hasNext()) {
+			it.next().lire();
+		}
+		
+	}
+	
+	
+}

@@ -1,0 +1,66 @@
+package beinplayer.player;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import beinplayer.exception.ImpossibleOperationException;
+import beinplayer.player.Lisible;
+
+public class ListeDeLecture implements Lisible{
+
+	private List<Lisible> listeDeLecture = new ArrayList<Lisible>();
+	private Lisible lectureCourante; 
+	
+	public ListeDeLecture() {
+		super();
+	}
+	
+	public Lisible getPremierTitre(){
+		if(listeDeLecture.size()==0){
+			throw  new UnsupportedOperationException();
+		}
+		return listeDeLecture.get(0);
+	}
+	
+	public int taille(){
+		return listeDeLecture.size();
+	}
+	
+	public void ajouter(Lisible lisible){
+		if(listeDeLecture==null){
+			listeDeLecture = new ArrayList<Lisible>();
+		}
+		if(listeDeLecture.size()==0){
+			lectureCourante = lisible;
+		}
+		listeDeLecture.add(lisible);
+	}
+	
+	public int nombreElements(){
+		return listeDeLecture.size();
+	}
+
+	@Override
+	public void jouer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Lisible suivant() throws ImpossibleOperationException {
+		listeDeLecture
+	}
+
+	@Override
+	public Lisible precedant() throws ImpossibleOperationException {
+		return null;
+	}
+	
+	
+}

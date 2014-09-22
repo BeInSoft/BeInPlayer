@@ -1,0 +1,44 @@
+package beinplayer.metier;
+
+
+
+public class Titre implements Lisible {
+	
+	private int duree;
+	private String nom;
+	private Artiste artiste;
+	private Genre genre;
+	
+	//Constructeurs 
+	public Titre() {
+		super();
+	}
+
+	public Titre(String nom, int duree, Artiste artiste, Genre genre) {
+		super();
+		this.duree = duree;
+		this.nom = nom;
+		this.artiste = artiste;
+		this.genre = genre;
+	}
+	
+	public void lecture(){
+		System.out.println("Lecture du titre "+this.nom);
+	}
+
+	public Artiste getArtiste() {
+		return artiste;
+	}
+
+	public void setArtiste(Artiste artiste) {
+		this.artiste = artiste;
+	}
+
+	@Override
+	public void lire() {
+		System.out.println("Lecture du titre "+this.nom+" de "+this.artiste.getNom() +"("+this.duree+"s)");
+	}
+	
+	
+	
+}

@@ -1,0 +1,9 @@
+package beinplayer.metier;
+
+public enum Genre {
+	Rock(0, "Rock"), Electro, Pop}
+	
+	Genre(int id, String label){
+		
+	}
+}

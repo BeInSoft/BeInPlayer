@@ -1,0 +1,18 @@
+package beinplayer.metier.lecteur;
+
+
+public class Lecteur  {
+
+	private boolean repeteTout = false;
+	
+	public Lecteur() {
+		super();
+	}
+	
+	public void jouer(ListeDeLecture listeDeLecture) {
+		do{
+			listeDeLecture.lire();
+		}while(repeteTout);
+	}
+
+}

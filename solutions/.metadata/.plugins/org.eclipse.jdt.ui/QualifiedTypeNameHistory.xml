@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.xsom.impl.scd.Iterators.Map"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="beinplay.metier.Artiste"/>
+<fullyQualifiedTypeName name="beinplay.metier.BeInPlay"/>
+<fullyQualifiedTypeName name="beinplay.player.PlayList"/>
+<fullyQualifiedTypeName name="beinplay.player.Player"/>
+<fullyQualifiedTypeName name="beinplay.metier.Catalogue"/>
+<fullyQualifiedTypeName name="beinplay.player.Playable"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="beinplayer.metier.Album"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="beinplayer.metier.Titre"/>
+<fullyQualifiedTypeName name="java.lang.UnsupportedOperationException"/>
+<fullyQualifiedTypeName name="beinplayer.player.ListeDeLecture"/>
+<fullyQualifiedTypeName name="beinplayer.exception.ImpossibleOperationException"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="beinplayer.player.Lecteur"/>
+<fullyQualifiedTypeName name="beinplayer.player.Lisible"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="beinplayer.metier.lecteur.ListeDeLecture"/>
+<fullyQualifiedTypeName name="beinplayer.metier.lecteur.Lecteur"/>
+<fullyQualifiedTypeName name="beinplayer.dao.impl.TitreDAOMock"/>
+<fullyQualifiedTypeName name="beinplayer.dao.impl.TitreDAOImpl"/>
+<fullyQualifiedTypeName name="beinplayer.dao.TitreDAO"/>
+<fullyQualifiedTypeName name="beinplayer.dao.DAOFactory"/>
+<fullyQualifiedTypeName name="Lecteur"/>
+</qualifiedTypeNameHistroy>

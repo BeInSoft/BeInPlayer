@@ -1,0 +1,5 @@
+package beinplayer.dao;
+
+public interface TitreDAO {
+
+}

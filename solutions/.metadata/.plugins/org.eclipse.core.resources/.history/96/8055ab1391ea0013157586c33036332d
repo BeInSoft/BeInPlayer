@@ -1,0 +1,68 @@
+package beinplayer.metier;
+
+import beinplayer.exception.ImpossibleOperationException;
+import beinplayer.player.Lisible;
+
+
+public class Titre implements Lisible {
+	
+	
+	private int duree;
+	private String nom;
+	private Artiste artiste;
+	private Genre genre;
+	
+	//Constructeurs 
+	public Titre() {
+		super();
+	}
+
+	public Titre(String nom, int duree, Artiste artiste, Genre genre) {
+		super();
+		this.duree = duree;
+		this.nom = nom;
+		this.artiste = artiste;
+		this.genre = genre;
+	}
+	
+	public void lecture(){
+		System.out.println("Lecture du titre "+this.nom);
+	}
+
+	public Artiste getArtiste() {
+		return artiste;
+	}
+
+	public void setArtiste(Artiste artiste) {
+		this.artiste = artiste;
+	}
+
+	
+	
+	@Override
+	public void jouer() {
+		System.out.println("Le titre "+this.duree+" sera joué pendant une durée de "+this.duree+ "s.");
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub	
+	}
+
+	@Override
+	public Lisible suivant() throws ImpossibleOperationException {
+		throw new ImpossibleOperationException("Pas de suivant pour un titre");
+	}
+
+	@Override
+	public Lisible precedant() throws ImpossibleOperationException {
+		throw new ImpossibleOperationException("Pas de précédant pour un titre");
+	}
+
+
+	
+	
+	
+	
+	
+}

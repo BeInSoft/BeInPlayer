@@ -1,0 +1,5 @@
+package beinplayer.metier;
+
+public enum Genre {
+
+}

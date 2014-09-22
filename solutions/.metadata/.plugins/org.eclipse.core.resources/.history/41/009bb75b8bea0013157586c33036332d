@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+
+public class Test{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		//Afficher la liste des titres de la bibliothèque
+		
+		//Compléter la liste de lecture
+		do{
+			
+			
+			System.out.println("Voulez-vous ajouter un titre supplémentaire ? [o|n]");
+		}while(sc.nextLine().equalsIgnoreCase("o"));
+		
+	}
+	
+}

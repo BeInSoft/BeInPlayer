@@ -1,0 +1,22 @@
+package beinplayer.metier;
+
+import beinplayer.metier.lecteur.ListeDeLecture;
+
+public class BeInPlayer {
+
+	private ListeDeLecture listeDeLecture;
+	private Catalogue catalogue;
+	
+	public BeInPlayer() {
+		System.out.println("DŽmarrage du BeInPlayer");
+		listeDeLecture = new ListeDeLecture();
+		catalogue = new Catalogue();
+	}
+
+	public void compeleterLaListeDeLecteure() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

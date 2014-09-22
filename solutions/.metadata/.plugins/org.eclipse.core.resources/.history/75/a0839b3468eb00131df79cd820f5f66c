@@ -1,0 +1,39 @@
+package beinplayer.metier.lecteur;
+
+
+public class Lecteur  {
+
+	public Lecteur() {
+		super();
+	}
+	
+	
+	public synchronized void jouer() throws Exception {
+		while(true){
+			if(listeDeLecture!=null && listeDeLecture.taille()>0){
+				while(!estSurPause){
+					lectureCourante.jouer();
+					lectureCourante = lectureCourante.suivant();
+				}
+			}else{
+				this.wait();
+			}
+		}
+	}
+	
+	public synchronized void playPause() {
+		try {
+			this.wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public synchronized void setListeDeLecture(ListeDeLecture nouvelleListe){
+		this.listeDeLecture = nouvelleListe;
+		this.lectureCourante = listeDeLecture.getPremierTitre();
+	}
+
+	
+
+}

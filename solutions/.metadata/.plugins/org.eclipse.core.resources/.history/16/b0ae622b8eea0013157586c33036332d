@@ -1,0 +1,30 @@
+package beinplayer.metier;
+
+public enum Genre {
+	Rock(0, "Rock"), Electro(1, "Electro"), Pop(2,"Pop");
+	
+	private int id;
+	private String label;
+	
+	private Genre(int id, String label){
+		this.id=id;
+		this.label=label;
+	}
+	
+	public static Genre getGenreByIndex(int id){
+		Genre result = Genre.Rock;
+		switch (id) {
+		case 0:
+			result = Genre.Rock;
+			break;
+		case 1:
+			result = Genre.Electro;
+			break;
+		case 2:
+			result = Genre.Electro;
+			break;
+		}
+		return result;
+	}
+	
+}

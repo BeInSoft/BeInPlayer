@@ -1,0 +1,15 @@
+package beinplayer.dao;
+
+public class TitreDAO {
+
+	private final static String SELECT_ALL_TITRES = "select * from titre";
+	private final static String SELECT_TITRES_BY_AUTEUR = "select * from titre t, auteur a where a.nom=? and t.auteurId=a.id";
+	
+	
+	public static List<Titre> getAllTitreFromDataBase(){
+		
+	}
+	
+	
+	
+}

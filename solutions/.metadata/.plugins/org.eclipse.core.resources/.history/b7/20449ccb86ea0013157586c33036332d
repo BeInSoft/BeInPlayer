@@ -1,0 +1,14 @@
+package beinplayer.metier;
+
+import beinplayer.player.ListeDeLecture;
+
+public class BeInPlayer {
+
+	private ListeDeLecture listeDeLecture
+	
+	public BeInPlayer() {
+		System.out.println("DŽmarrage du BeInPlayer");
+	}
+	
+	
+}

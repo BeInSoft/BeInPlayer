@@ -1,0 +1,37 @@
+package beinplayer.metier;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Album implements Lisible{
+
+	private String nom;
+	private Artiste artiste;
+	private List<Titre> titres = new ArrayList<Titre>();
+	
+	public Album(String nom, Artiste artiste) {
+		super();
+		this.nom = nom;
+		this.artiste = artiste;
+	}
+	
+	public void addTitre(Titre titre){
+		titres.add(titre);
+	}
+	
+	public int nombreDeTitres(){
+		return titres.size();
+	}
+
+	@Override
+	public void lire() {
+		Iterator<Titre> it = titres.iterator();
+		while (it.hasNext()) {
+			it.next();
+			
+		}
+		
+	}
+	
+}

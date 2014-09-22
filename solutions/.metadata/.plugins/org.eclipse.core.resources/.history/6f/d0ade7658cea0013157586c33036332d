@@ -1,0 +1,36 @@
+package beinplayer.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import beinplayer.metier.Titre;
+
+public class TitreDAOImpl {
+
+	private final static String SELECT_ALL_TITRES = "select * from titre";
+	
+	public List<Titre> getAllTitreFromDataBase(){
+		List<Titre> titres = new ArrayList<Titre>();
+		try {
+			Class.forName("org.hsqldb");
+			Connection cnx = DriverManager.getConnection("","sa","");
+			Statement createStatement = cnx.createStatement();
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return titres;
+		
+	}
+	
+	
+	
+}

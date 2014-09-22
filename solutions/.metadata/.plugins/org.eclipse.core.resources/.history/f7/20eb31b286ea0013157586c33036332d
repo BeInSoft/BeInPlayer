@@ -1,0 +1,10 @@
+package beinplayer.metier;
+
+public class BeInPlayer {
+
+	public BeInPlayer() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

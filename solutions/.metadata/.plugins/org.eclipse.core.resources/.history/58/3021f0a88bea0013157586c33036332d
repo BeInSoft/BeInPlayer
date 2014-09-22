@@ -1,0 +1,17 @@
+package beinplayer.dao;
+
+import java.util.List;
+
+import beinplayer.metier.Titre;
+
+public class TitreDAO {
+
+	private final static String SELECT_ALL_TITRES = "select * from titre";
+	
+	public static List<Titre> getAllTitreFromDataBase(){
+		Class.forName("org.hsqldb")
+	}
+	
+	
+	
+}

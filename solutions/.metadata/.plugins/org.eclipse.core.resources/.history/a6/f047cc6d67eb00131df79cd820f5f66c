@@ -1,0 +1,7 @@
+package beinplayer.metier;
+
+public interface Lisible {
+
+	void lire();
+	
+}

@@ -1,0 +1,57 @@
+package beinplayer.metier.lecteur;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import beinplayer.exception.ImpossibleOperationException;
+import beinplayer.metier.Lisible;
+
+public class ListeDeLecture {
+
+	private List<Lisible> listeDeLecture;
+	
+	public ListeDeLecture() {
+		super();
+		listeDeLecture = new ArrayList<Lisible>();
+	}
+	
+	
+	
+	public void ajouter(Lisible lisible){
+		if(listeDeLecture==null){
+			listeDeLecture = new ArrayList<Lisible>();
+		}
+		if(listeDeLecture.size()==0){
+			lectureCourante = lisible;
+		}
+		listeDeLecture.add(lisible);
+	}
+	
+	public int nombreElements(){
+		return listeDeLecture.size();
+	}
+
+	@Override
+	public void jouer() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Lisible suivant() throws ImpossibleOperationException {
+		listeDeLecture
+	}
+
+	@Override
+	public Lisible precedant() throws ImpossibleOperationException {
+		return null;
+	}
+	
+	
+}

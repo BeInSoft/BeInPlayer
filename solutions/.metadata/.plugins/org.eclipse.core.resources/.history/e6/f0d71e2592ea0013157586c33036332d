@@ -1,0 +1,24 @@
+package beinplayer.ihm;
+import java.util.Scanner;
+
+import beinplayer.metier.BeInPlayer;
+import beinplayer.metier.Catalogue;
+import beinplayer.metier.Titre;
+import beinplayer.metier.lecteur.Lecteur;
+import beinplayer.metier.lecteur.ListeDeLecture;
+
+/**
+ * Itération 5 : Un peu d'objets 
+ * @author beInSoft
+ */
+class Main {
+	
+	public static void main(String[] args) {
+		
+		BeInPlayer player = new BeInPlayer();
+		
+			
+	}
+	
+	
+}

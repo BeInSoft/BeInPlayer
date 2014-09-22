@@ -1,0 +1,30 @@
+package beinplayer.metier.lecteur;
+
+
+public class Lecteur  {
+
+	public Lecteur() {
+		super();
+	}
+	
+	
+	public synchronized void jouer(ListeDeLecture listeDeLecture) {
+		
+	}
+	
+	public synchronized void playPause() {
+		try {
+			this.wait();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public synchronized void setListeDeLecture(ListeDeLecture nouvelleListe){
+		this.listeDeLecture = nouvelleListe;
+		this.lectureCourante = listeDeLecture.getPremierTitre();
+	}
+
+	
+
+}

@@ -1,0 +1,16 @@
+import java.util.Date;
+import java.util.Scanner;
+
+
+public class Test{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		do{
+			
+			System.out.println("Voulez-vous ajouter un titre supplémentaire ? [o|n]");
+		}while(sc.nextLine().equalsIgnoreCase("o"));
+		
+	}
+	
+}

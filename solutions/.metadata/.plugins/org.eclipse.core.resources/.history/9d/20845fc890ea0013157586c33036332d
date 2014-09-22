@@ -1,0 +1,69 @@
+package beinplayer.metier;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import beinplayer.dao.TitreDAO;
+import beinplayer.dao.impl.TitreDAOMock;
+
+
+public class Catalogue {
+
+	private List<Titre> titres;
+	private Map<Artiste, List<Titre>> titresParArtiste = new HashMap<Artiste, List<Titre>>();
+
+	public Catalogue() {
+		TitreDAO titreDAO = new TitreDAOMock();
+		titres = titreDAO.getAllTitreFromDataBase();
+		for (Iterator<Titre> iter = titres.iterator(); iter.hasNext();) {
+			Titre titre = iter.next();
+			Artiste artiste = titre.getArtiste();
+			List<Titre> liste;
+			if(titresParArtiste.containsKey(artiste)){
+				liste = new ArrayList<Titre>();
+				titresParArtiste.put(artiste, liste);
+			}else{
+				 liste = titresParArtiste.get(artiste);
+			}
+		}
+	}
+	
+	public Titre getTitreAleatoire(){
+		return titres.get((int)Math.random()*titres.size());
+	}
+	
+	public Iterator<Titre> getTitresParAuteur(Artiste auteur){
+		List<Titre> list = titresParArtiste.get(auteur);
+		return list!=null?list.iterator():null;
+	}
+	
+	private void ajouterTitre(Titre titre, Artiste artiste){
+		titres.add(titre);
+		
+		if(titresParArtiste.containsKey(artiste)){
+			List<Titre> list = titresParArtiste.get(artiste);
+			if(!list.contains(titre)){
+				list.add(titre);
+			}
+		}else{
+			List<Titre> list = new ArrayList<Titre>();
+			list.add(titre);
+			titresParArtiste.put(artiste, list);
+		}
+	}
+	
+	
+	
+	
+	public List<Titre> titresParArtiste(Artiste artiste){
+		List<Titre> resultat=null;
+		if(titresParArtiste.containsKey(artiste)){
+			resultat = titresParArtiste.get(artiste);
+		}
+		return resultat;
+	}
+	
+}
